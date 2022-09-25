@@ -1,0 +1,35 @@
+
+
+
+let student = [{
+    name : "Jayaram",
+    std : "10th",
+    mark : [90,90,80,96,96],
+}];
+
+let total = student[0].mark;
+let sum = 0;
+for(let i =0 ; i < total.length ; i++){
+    sum += total[i];
+}
+student[0]["total"] = sum ;
+
+const totalsubject = student[0].mark.length;
+let average = student[0].total/totalsubject;
+student[0]["average"] = average;
+
+let grade = student[0].average;
+if(grade > 50) student[0]["grade"] = "PASS"
+else
+student[0]["grade"] = "Fail";
+
+// console.log(student);
+
+let jsonstring = JSON.stringify(student);
+console.log(jsonstring);
+
+
+
+
+
+
